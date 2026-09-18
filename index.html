@@ -99,6 +99,13 @@
 
 </div><script>
 function nextPage() {
+    const music = new Audio("lagu.mp3");
+    music.loop = true;
+    music.volume = 0.6;
+    music.play();
+
+    sessionStorage.setItem("musicStarted", "true");
+
     window.location.href = "ucapan.html";
 }
 </script></body>
