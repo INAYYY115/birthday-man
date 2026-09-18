@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Little Things 🤍</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600&family=Playfair+Display:wght@500;600;700&family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        min-height: 100vh;
+        background: #ffdce9;
+        font-family: 'Quicksand', sans-serif;
+        color: #6f4052;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 25px;
+    }
+
+    .card {
+        width: 90%;
+        max-width: 380px;
+        background: #fffafa;
+        padding: 35px 22px;
+        border-radius: 28px;
+        text-align: center;
+        box-shadow: 0 12px 30px rgba(120, 70, 90, 0.12);
+    }
+
+    .ribbon {
+        font-size: 38px;
+        margin-bottom: 8px;
+    }
+
+    h1 {
+        margin: 5px 0 25px;
+        color: #e8759f;
+        font-size: 29px;
+        font-family: 'Playfair Display', serif;
+    }
+
+    .little-box {
+        background: #ffeaf1;
+        border-radius: 18px;
+        padding: 14px;
+        margin-bottom: 12px;
+        text-align: left;
+    }
+
+    .little-box button {
+        width: 100%;
+        border: none;
+        background: transparent;
+        color: #b85f7f;
+        font-family: 'Quicksand', sans-serif;
+        font-size: 15px;
+        font-weight: 600;
+        cursor: pointer;
+        text-align: left;
+        padding: 3px;
+    }
+
+    .message {
+        display: none;
+        font-size: 13px;
+        line-height: 1.7;
+        margin: 10px 3px 2px;
+        color: #76505f;
+    }
+
+    .message.show {
+        display: block;
+    }
+
+    .ending {
+        margin-top: 28px;
+        font-family: 'Dancing Script', cursive;
+        font-size: 21px;
+        color: #b86b86;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+    <div class="ribbon">🎀</div>
+
+    <h1>Little Things</h1>
+
+    <div class="little-box">
+        <button onclick="showMessage(1)">🤍 One</button>
+        <div class="message" id="message1">
+            Hal kecil yang mungkin sederhana, tapi selalu aku ingat.
+        </div>
+    </div>
+
+    <div class="little-box">
+        <button onclick="showMessage(2)">🎀 Two</button>
+        <div class="message" id="message2">
+            Terima kasih untuk hal-hal kecil yang kamu lakukan tanpa banyak bilang.
+        </div>
+    </div>
+
+    <div class="little-box">
+        <button onclick="showMessage(3)">🐬 Three</button>
+        <div class="message" id="message3">
+            Semoga nanti masih ada banyak cerita kecil yang bisa kita ingat lagi.
+        </div>
+    </div>
+
+    <div class="ending">
+        Happy Birthday, Dy. 🤍
+    </div>
+
+</div>
+
+<script>
+function showMessage(number) {
+    const message = document.getElementById("message" + number);
+
+    if (message.classList.contains("show")) {
+        message.classList.remove("show");
+    } else {
+        message.classList.add("show");
+    }
+}
+</script>
+
+</body>
+</html>
