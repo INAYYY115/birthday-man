@@ -1,0 +1,133 @@
+<!DOCTYPE html><html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Happy Birthday 🎀</title><style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: Arial, sans-serif;
+        background: #ffd6e7;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        color: #7a3152;
+    }
+
+    .hearts {
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        font-size: 25px;
+    }
+
+    .heart {
+        position: absolute;
+        animation: float 5s infinite ease-in-out;
+    }
+
+    .heart:nth-child(1) { left: 10%; top: 15%; }
+    .heart:nth-child(2) { left: 80%; top: 20%; animation-delay: 1s; }
+    .heart:nth-child(3) { left: 18%; bottom: 15%; animation-delay: 2s; }
+    .heart:nth-child(4) { right: 12%; bottom: 18%; animation-delay: 3s; }
+
+    @keyframes float {
+        0%, 100% { transform: translateY(0) rotate(-5deg); }
+        50% { transform: translateY(-15px) rotate(5deg); }
+    }
+
+    .card {
+        width: 90%;
+        max-width: 390px;
+        background: #fff8fb;
+        border-radius: 30px;
+        padding: 35px 25px;
+        text-align: center;
+        box-shadow: 0 15px 35px rgba(170, 70, 110, 0.18);
+        position: relative;
+    }
+
+    .ribbon {
+        font-size: 45px;
+        margin-bottom: 10px;
+    }
+
+    .small {
+        font-size: 14px;
+        margin: 0 0 8px;
+    }
+
+    h1 {
+        font-size: 32px;
+        margin: 8px 0;
+        color: #e85d91;
+    }
+
+    .subtitle {
+        font-size: 16px;
+        line-height: 1.6;
+        margin: 15px 0 25px;
+    }
+
+    button {
+        border: none;
+        background: #f58bb2;
+        color: white;
+        padding: 14px 22px;
+        border-radius: 50px;
+        font-size: 15px;
+        font-weight: bold;
+        cursor: pointer;
+        box-shadow: 0 6px 15px rgba(220, 80, 130, 0.25);
+    }
+
+    button:active {
+        transform: scale(0.96);
+    }
+
+    .secret {
+        display: none;
+        margin-top: 25px;
+        font-size: 15px;
+        line-height: 1.7;
+    }
+</style></head><body><div class="hearts">
+    <div class="heart">🩷</div>
+    <div class="heart">🎀</div>
+    <div class="heart">💗</div>
+    <div class="heart">🌷</div>
+</div><div class="card"><div class="ribbon">🎀</div>
+
+<p class="small">pssst... ada seseorang yang ulang tahun 👀</p>
+
+<h1>Happy Birthday!</h1>
+
+<p class="subtitle">
+    And unfortunately...<br>
+    you're the someone. 😭🩷
+</p>
+
+<button onclick="openMessage()">
+    💌 OPEN YOUR SURPRISE
+</button>
+
+<div class="secret" id="secret">
+    <strong>
+        HAHAHA ketemu juga! 😭🎀
+    </strong>
+    <br><br>
+    Tapi ini baru permulaan...
+    <br><br>
+    Ada sesuatu yang aku siapin khusus buat kamu. 🩷
+</div>
+
+</div><script>
+function openMessage() {
+    document.getElementById("secret").style.display = "block";
+}
+</script></body>
+</html>
